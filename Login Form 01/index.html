@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache. must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+
+</head>
+
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="#" method="">
+                    <h2>Sing In</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="password" id="exampleInputPassword1"required>
+                        <label for="">Password</label>
+                        <button type="button" id="password-toggle"><i class="fa-solid fa-eye-slash"></i></button>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox" name="remember-me">Remember Me <a href="#">Forgot
+                                Password?</a></label>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" name="submit" class="btn btn-primary" value="Login">
+                    </div>
+                    <div class="social">
+                        <div class="google">
+                            <a href=""><i class="fa-brands fa-google-plus"></i>Login With<span>Google</span></a>
+                        </div>
+
+                        <div class="facebook">
+                            <a href=""><i class="fa-brands fa-facebook"></i>Login with<span>Facebook</span></a>
+                        </div>
+                    </div>
+
+                    <div class="register">
+                        <a href="#">Create an Account</a>
+                    </div>
+                    <div class="home">
+                        <a href="#"><i class="fa-solid fa-house"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const passwordInput = document.getElementById('exampleInputPassword1');
+            const passwordToggle = document.getElementById('password-toggle');
+
+            passwordToggle.addEventListener('click', function () {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    passwordToggle.innerHTML = '<i class="fa-solid fa-eye"></i>';
+                } else {
+                    passwordInput.type = 'password';
+                    passwordToggle.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
